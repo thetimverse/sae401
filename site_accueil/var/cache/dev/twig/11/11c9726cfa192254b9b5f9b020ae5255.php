@@ -114,7 +114,10 @@ class __TwigTemplate_c38d11fb116f8af1715a646046bfa39f extends Template
         // line 14
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 14, $this->source); })()), "username", [], "any", false, false, false, 14), 'row');
         echo "
-
+        ";
+        // line 15
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 15, $this->source); })()), "avatar", [], "any", false, false, false, 15), 'row');
+        echo "
         ";
         // line 16
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 16, $this->source); })()), "plainPassword", [], "any", false, false, false, 16), 'row', ["label" => "Mot de passe"]);
@@ -151,7 +154,7 @@ class __TwigTemplate_c38d11fb116f8af1715a646046bfa39f extends Template
 
     public function getDebugInfo()
     {
-        return array (  131 => 22,  125 => 19,  122 => 18,  120 => 16,  115 => 14,  111 => 13,  107 => 12,  102 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  134 => 22,  128 => 19,  125 => 18,  123 => 16,  119 => 15,  115 => 14,  111 => 13,  107 => 12,  102 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -170,7 +173,7 @@ class __TwigTemplate_c38d11fb116f8af1715a646046bfa39f extends Template
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.username) }}
-
+        {{ form_row(registrationForm.avatar) }}
         {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe'
         }) }}
