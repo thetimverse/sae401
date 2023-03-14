@@ -87,8 +87,14 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
         // line 6
         echo "    <header>
         <nav>
-            <button class=\"btn btn-secondary\">S'inscrire</button>
-            <button class=\"btn btn-primary\">Se connecter</button>
+            <button class=\"btn btn-secondary\"><a href=\"";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\">S'inscrire</a></button>
+            <button class=\"btn btn-primary\"><a href=\"";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\">Se connecter</a></button>
         </nav>
     </header>
 
@@ -131,7 +137,7 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  106 => 27,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  112 => 27,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -143,8 +149,8 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 {% block body %}
     <header>
         <nav>
-            <button class=\"btn btn-secondary\">S'inscrire</button>
-            <button class=\"btn btn-primary\">Se connecter</button>
+            <button class=\"btn btn-secondary\"><a href=\"{{ path('app_register')}}\">S'inscrire</a></button>
+            <button class=\"btn btn-primary\"><a href=\"{{ path('app_login')}}\">Se connecter</a></button>
         </nav>
     </header>
 

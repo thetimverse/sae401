@@ -65,11 +65,18 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         // line 15
         echo "    </head>
     <body>
-        ";
-        // line 17
+";
+        // line 20
+        echo "
+    ";
+        // line 21
         $this->displayBlock('body', $context, $blocks);
-        // line 18
-        echo "    </body>
+        // line 22
+        echo "
+";
+        // line 26
+        echo "
+    </body>
 </html>
 ";
         
@@ -141,7 +148,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     }
 
-    // line 17
+    // line 21
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -166,7 +173,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  145 => 17,  134 => 13,  124 => 12,  113 => 9,  103 => 8,  84 => 5,  72 => 18,  70 => 17,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  152 => 21,  141 => 13,  131 => 12,  120 => 9,  110 => 8,  91 => 5,  78 => 26,  75 => 22,  73 => 21,  70 => 20,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -187,7 +194,16 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+{#
+    {% include \"menu.html.twig\" %}
+#}
+
+    {% block body %}{% endblock %}
+
+{#
+    {% include \"footer.html.twig\" %}
+#}
+
     </body>
 </html>
 ", "base.html.twig", "/var/www/sae401/site_accueil/templates/base.html.twig");
