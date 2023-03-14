@@ -65,7 +65,7 @@ class __TwigTemplate_a0eb715721bf2cbce15aacc00b47a2e1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Log in!";
+        echo "Codenames - Connexion";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -102,24 +102,24 @@ class __TwigTemplate_a0eb715721bf2cbce15aacc00b47a2e1 extends Template
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11)) {
             // line 12
             echo "        <div class=\"mb-3\">
-            You are logged in as ";
+            Vous êtes connecté en tant que ";
             // line 13
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", [], "any", false, false, false, 13), "userIdentifier", [], "any", false, false, false, 13), "html", null, true);
             echo ", <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
+            echo "\">Se déconnecter</a>
         </div>
     ";
         }
         // line 16
         echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
+    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    <label for=\"inputEmail\">E-mail</label>
     <input type=\"email\" value=\"";
         // line 19
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
+    <label for=\"inputPassword\">Mot de passe</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
@@ -131,9 +131,10 @@ class __TwigTemplate_a0eb715721bf2cbce15aacc00b47a2e1 extends Template
 
     ";
         // line 37
-        echo "
+        echo "    <input type=\"hidden\" name=\"_target_path\" value=\"/compte\">
+
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
+        Connexion
     </button>
 </form>
 ";
@@ -164,7 +165,7 @@ class __TwigTemplate_a0eb715721bf2cbce15aacc00b47a2e1 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Codenames - Connexion{% endblock %}
 
 {% block body %}
 <form method=\"post\">
@@ -174,14 +175,14 @@ class __TwigTemplate_a0eb715721bf2cbce15aacc00b47a2e1 extends Template
 
     {% if app.user %}
         <div class=\"mb-3\">
-            You are logged in as {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
+            Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Se déconnecter</a>
         </div>
     {% endif %}
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
+    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    <label for=\"inputEmail\">E-mail</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
+    <label for=\"inputPassword\">Mot de passe</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
@@ -198,9 +199,10 @@ class __TwigTemplate_a0eb715721bf2cbce15aacc00b47a2e1 extends Template
             </label>
         </div>
     #}
+    <input type=\"hidden\" name=\"_target_path\" value=\"/compte\">
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
+        Connexion
     </button>
 </form>
 {% endblock %}

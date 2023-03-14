@@ -20,12 +20,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
 
-    #[ORM\Column(length: 50, unique: true)]
-    private ?string $username = null;
-
-    #[ORM\Column(length: 200)]
-    private ?string $avatar = null;
-
     #[ORM\Column]
     private array $roles = [];
 
@@ -38,6 +32,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
 
+    #[ORM\Column(length: 50)]
+    private ?string $username = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $avatar = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -46,22 +46,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getEmail(): ?string
     {
         return $this->email;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getUsername(): ?string
-    {
-        return $this->username;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getAvatar(): ?string
-    {
-        return $this->avatar;
     }
 
     public function setEmail(string $email): self
@@ -132,6 +116,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    public function getAvatar(): ?string
+    {
+        return $this->avatar;
+    }
+
+    public function setAvatar(string $avatar): self
+    {
+        $this->avatar = $avatar;
 
         return $this;
     }
