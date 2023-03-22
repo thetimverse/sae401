@@ -3,6 +3,8 @@
 {% block title %}Codenames - Connexion{% endblock %}
 
 {% block body %}
+    <div class="main">
+
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -19,6 +21,8 @@
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
     <label for="inputPassword">Mot de passe</label>
     <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+    <a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
@@ -40,4 +44,6 @@
         Connexion
     </button>
 </form>
+    </div>
+
 {% endblock %}
