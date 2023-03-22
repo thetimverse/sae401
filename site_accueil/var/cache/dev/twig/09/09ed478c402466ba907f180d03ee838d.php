@@ -87,28 +87,29 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
         // line 6
         echo "    <header>
         <nav>
-            <button class=\"btn btn-secondary\"><a href=\"";
+            <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-        echo "\">S'inscrire</a></button>
-            <button class=\"btn btn-primary\"><a href=\"";
+        echo "\" class=\"btn btn-secondary\">S'inscrire</a>
+            <a href=\"";
         // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-        echo "\">Se connecter</a></button>
+        echo "\" class=\"btn btn-primary\">Se connecter</a>
         </nav>
     </header>
 
-    <div id=\"home\">
+
+    <div id=\"home\" class=\"main\">
         <img src=\"../images/codenames-13.png\" alt=\"logo\" id=\"logo\">
 
 
         <div id=\"home-btn\">
-            <button class=\"btn btn-primary\">Créer une partie</button>
-            <button class=\"btn btn-secondary\">Les règles</button>
+            <a href=\"#\" class=\"btn btn-primary\">Créer une partie</a>
+            <a href=\"#\" class=\"btn btn-secondary\">Les règles</a>
         </div>
 
 ";
-        // line 27
+        // line 28
         echo "    </div>
 
 
@@ -137,7 +138,7 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  112 => 27,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  113 => 28,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -149,18 +150,19 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 {% block body %}
     <header>
         <nav>
-            <button class=\"btn btn-secondary\"><a href=\"{{ path('app_register')}}\">S'inscrire</a></button>
-            <button class=\"btn btn-primary\"><a href=\"{{ path('app_login')}}\">Se connecter</a></button>
+            <a href=\"{{ path('app_register')}}\" class=\"btn btn-secondary\">S'inscrire</a>
+            <a href=\"{{ path('app_login')}}\" class=\"btn btn-primary\">Se connecter</a>
         </nav>
     </header>
 
-    <div id=\"home\">
+
+    <div id=\"home\" class=\"main\">
         <img src=\"../images/codenames-13.png\" alt=\"logo\" id=\"logo\">
 
 
         <div id=\"home-btn\">
-            <button class=\"btn btn-primary\">Créer une partie</button>
-            <button class=\"btn btn-secondary\">Les règles</button>
+            <a href=\"#\" class=\"btn btn-primary\">Créer une partie</a>
+            <a href=\"#\" class=\"btn btn-secondary\">Les règles</a>
         </div>
 
 {#        <div id=\"banner\">

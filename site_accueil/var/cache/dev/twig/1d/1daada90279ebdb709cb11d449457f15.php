@@ -67,7 +67,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
     <body>
 ";
         // line 20
-        echo "
+        echo "<img src=\"../images/dots3.png\" class=\"overlay\">
     ";
         // line 21
         $this->displayBlock('body', $context, $blocks);
@@ -197,7 +197,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 {#
     {% include \"menu.html.twig\" %}
 #}
-
+<img src=\"../images/dots3.png\" class=\"overlay\">
     {% block body %}{% endblock %}
 
 {#

@@ -5,18 +5,19 @@
 {% block body %}
     <header>
         <nav>
-            <button class="btn btn-secondary"><a href="{{ path('app_register')}}">S'inscrire</a></button>
-            <button class="btn btn-primary"><a href="{{ path('app_login')}}">Se connecter</a></button>
+            <a href="{{ path('app_register')}}" class="btn btn-secondary">S'inscrire</a>
+            <a href="{{ path('app_login')}}" class="btn btn-primary">Se connecter</a>
         </nav>
     </header>
 
-    <div id="home">
+
+    <div id="home" class="main">
         <img src="../images/codenames-13.png" alt="logo" id="logo">
 
 
         <div id="home-btn">
-            <button class="btn btn-primary">Créer une partie</button>
-            <button class="btn btn-secondary">Les règles</button>
+            <a href="#" class="btn btn-primary">Créer une partie</a>
+            <a href="#" class="btn btn-secondary">Les règles</a>
         </div>
 
 {#        <div id="banner">
