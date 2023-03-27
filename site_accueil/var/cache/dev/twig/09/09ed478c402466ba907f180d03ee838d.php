@@ -87,20 +87,35 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
         // line 6
         echo "    <header>
         <nav>
-            <a href=\"";
+            ";
         // line 8
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-        echo "\" class=\"btn btn-secondary\">S'inscrire</a>
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8)) {
+            // line 9
+            echo "            <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_compte");
+            echo "\" class=\"btn btn-secondary\">Compte</a>
+            ";
+        } else {
+            // line 11
+            echo "            <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+            echo "\" class=\"btn btn-secondary\">S'inscrire</a>
             <a href=\"";
-        // line 9
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-        echo "\" class=\"btn btn-primary\">Se connecter</a>
-        </nav>
+            // line 12
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\" class=\"btn btn-primary\">Se connecter</a>
+            ";
+        }
+        // line 14
+        echo "        </nav>
     </header>
 
 
     <div id=\"home\" class=\"main\">
-        <img src=\"../images/codenames-13.png\" alt=\"logo\" id=\"logo\">
+        <img src=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/codenames-13.png"), "html", null, true);
+        echo "\" alt=\"logo\" id=\"logo\">
 
 
         <div id=\"home-btn\">
@@ -109,7 +124,7 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
         </div>
 
 ";
-        // line 28
+        // line 32
         echo "    </div>
 
 
@@ -138,7 +153,7 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  113 => 28,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  128 => 32,  117 => 19,  110 => 14,  105 => 12,  100 => 11,  94 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -150,14 +165,18 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 {% block body %}
     <header>
         <nav>
+            {% if app.user %}
+            <a href=\"{{ path('app_compte')}}\" class=\"btn btn-secondary\">Compte</a>
+            {% else %}
             <a href=\"{{ path('app_register')}}\" class=\"btn btn-secondary\">S'inscrire</a>
             <a href=\"{{ path('app_login')}}\" class=\"btn btn-primary\">Se connecter</a>
+            {% endif %}
         </nav>
     </header>
 
 
     <div id=\"home\" class=\"main\">
-        <img src=\"../images/codenames-13.png\" alt=\"logo\" id=\"logo\">
+        <img src=\"{{ asset('images/codenames-13.png') }}\" alt=\"logo\" id=\"logo\">
 
 
         <div id=\"home-btn\">
