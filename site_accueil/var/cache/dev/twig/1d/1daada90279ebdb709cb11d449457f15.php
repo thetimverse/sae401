@@ -53,28 +53,31 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         ";
-        // line 8
+        // line 9
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
+        // line 13
         echo "
         ";
-        // line 12
+        // line 14
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 15
+        // line 17
         echo "    </head>
     <body>
 ";
-        // line 20
-        echo "<img src=\"../images/dots3.png\" class=\"overlay\">
-    ";
-        // line 21
-        $this->displayBlock('body', $context, $blocks);
         // line 22
+        echo "<img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/dots3.png"), "html", null, true);
+        echo "\" class=\"overlay\">
+    ";
+        // line 23
+        $this->displayBlock('body', $context, $blocks);
+        // line 24
         echo "
 ";
-        // line 26
+        // line 28
         echo "
     </body>
 </html>
@@ -106,7 +109,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     }
 
-    // line 8
+    // line 9
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -116,8 +119,14 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 9
-        echo "            <link rel=\"stylesheet\" href=\"../css/style.css\"
+        // line 10
+        echo "            ";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
+        echo "
+            <link rel=\"stylesheet\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
+        echo "\"
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -127,7 +136,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     }
 
-    // line 12
+    // line 14
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -137,7 +146,9 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 13
+        // line 15
+        echo "            ";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
         ";
         
@@ -148,7 +159,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     }
 
-    // line 21
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -171,9 +182,14 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  152 => 21,  141 => 13,  131 => 12,  120 => 9,  110 => 8,  91 => 5,  78 => 26,  75 => 22,  73 => 21,  70 => 20,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  163 => 23,  150 => 15,  140 => 14,  128 => 11,  123 => 10,  113 => 9,  94 => 5,  81 => 28,  78 => 24,  76 => 23,  71 => 22,  67 => 17,  65 => 14,  62 => 13,  59 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -184,20 +200,22 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            <link rel=\"stylesheet\" href=\"../css/style.css\"
+            {{ encore_entry_link_tags('app') }}
+            <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\"
         {% endblock %}
 
         {% block javascripts %}
-
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
 {#
     {% include \"menu.html.twig\" %}
 #}
-<img src=\"../images/dots3.png\" class=\"overlay\">
+<img src=\"{{ asset('images/dots3.png') }}\" class=\"overlay\">
     {% block body %}{% endblock %}
 
 {#
