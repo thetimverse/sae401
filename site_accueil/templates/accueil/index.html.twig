@@ -5,14 +5,18 @@
 {% block body %}
     <header>
         <nav>
+            {% if app.user %}
+            <a href="{{ path('app_compte')}}" class="btn btn-secondary">Compte</a>
+            {% else %}
             <a href="{{ path('app_register')}}" class="btn btn-secondary">S'inscrire</a>
             <a href="{{ path('app_login')}}" class="btn btn-primary">Se connecter</a>
+            {% endif %}
         </nav>
     </header>
 
 
     <div id="home" class="main">
-        <img src="../images/codenames-13.png" alt="logo" id="logo">
+        <img src="{{ asset('images/codenames-13.png') }}" alt="logo" id="logo">
 
 
         <div id="home-btn">
