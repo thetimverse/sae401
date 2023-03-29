@@ -39,12 +39,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 50)]
     private ?string $username = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $avatar = null;
+    #[ORM\ManyToOne]
+    private ?Avatars $avatar = null;
+
+    #[ORM\OneToMany(mappedBy: 'joueur1', targetEntity: Partie::class)]
+    private Collection $partiesJ1;
+
+    #[ORM\OneToMany(mappedBy: 'joueur2', targetEntity: Partie::class)]
+    private Collection $partiesJ2;
+
+    #[ORM\OneToMany(mappedBy: 'tour', targetEntity: Partie::class)]
+    private Collection $partiesTour;
 
     public function __construct()
     {
-        $this->parties = new ArrayCollection();
+        $this->partiesJ1 = new ArrayCollection();
+        $this->partiesJ2 = new ArrayCollection();
+        $this->partiesTour = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -143,14 +154,59 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getAvatar(): ?string
+    /**
+     * @return Collection<int, Partie>
+     */
+    public function getParties(): array
+    {
+        return array_merge($this->getPartiesJ1()->toArray(), $this->getPartiesJ2()->toArray());
+    }
+
+
+
+    public function getAvatar(): ?Avatars
     {
         return $this->avatar;
     }
 
-    public function setAvatar(string $avatar): self
+    public function setAvatar(?Avatars $avatar): self
     {
         $this->avatar = $avatar;
+
+        return $this;
+    }
+
+    public function isIsVerified(): ?bool
+    {
+        return $this->isVerified;
+    }
+
+    /**
+     * @return Collection<int, Partie>
+     */
+    public function getPartiesJ1(): Collection
+    {
+        return $this->partiesJ1;
+    }
+
+    public function addPartiesJ1(Partie $partiesJ1): self
+    {
+        if (!$this->partiesJ1->contains($partiesJ1)) {
+            $this->partiesJ1->add($partiesJ1);
+            $partiesJ1->setJoueur1($this);
+        }
+
+        return $this;
+    }
+
+    public function removePartiesJ1(Partie $partiesJ1): self
+    {
+        if ($this->partiesJ1->removeElement($partiesJ1)) {
+            // set the owning side to null (unless already changed)
+            if ($partiesJ1->getJoueur1() === $this) {
+                $partiesJ1->setJoueur1(null);
+            }
+        }
 
         return $this;
     }
@@ -158,30 +214,62 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @return Collection<int, Partie>
      */
-    public function getParties(): Collection
+    public function getPartiesJ2(): Collection
     {
-        return $this->parties;
+        return $this->partiesJ2;
     }
 
-    public function addParty(Partie $party): self
+    public function addPartiesJ2(Partie $partiesJ2): self
     {
-        if (!$this->parties->contains($party)) {
-            $this->parties->add($party);
-            $party->setJoueur1($this);
+        if (!$this->partiesJ2->contains($partiesJ2)) {
+            $this->partiesJ2->add($partiesJ2);
+            $partiesJ2->setJoueur2($this);
         }
 
         return $this;
     }
 
-    public function removeParty(Partie $party): self
+    public function removePartiesJ2(Partie $partiesJ2): self
     {
-        if ($this->parties->removeElement($party)) {
+        if ($this->partiesJ2->removeElement($partiesJ2)) {
             // set the owning side to null (unless already changed)
-            if ($party->getJoueur1() === $this) {
-                $party->setJoueur1(null);
+            if ($partiesJ2->getJoueur2() === $this) {
+                $partiesJ2->setJoueur2(null);
             }
         }
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Partie>
+     */
+    public function getPartiesTour(): Collection
+    {
+        return $this->partiesTour;
+    }
+
+    public function addPartiesTour(Partie $partiesTour): self
+    {
+        if (!$this->partiesTour->contains($partiesTour)) {
+            $this->partiesTour->add($partiesTour);
+            $partiesTour->setTour($this);
+        }
+
+        return $this;
+    }
+
+    public function removePartiesTour(Partie $partiesTour): self
+    {
+        if ($this->partiesTour->removeElement($partiesTour)) {
+            // set the owning side to null (unless already changed)
+            if ($partiesTour->getTour() === $this) {
+                $partiesTour->setTour(null);
+            }
+        }
+
+        return $this;
+    }
+
+
 }

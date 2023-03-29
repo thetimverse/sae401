@@ -69,7 +69,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 ";
         // line 22
         echo "<img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/dots3.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/dots3.png"), "html", null, true);
         echo "\" class=\"overlay\">
     ";
         // line 23
@@ -215,7 +215,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 {#
     {% include \"menu.html.twig\" %}
 #}
-<img src=\"{{ asset('images/dots3.png') }}\" class=\"overlay\">
+<img src=\"{{ asset('img/dots3.png') }}\" class=\"overlay\">
     {% block body %}{% endblock %}
 
 {#

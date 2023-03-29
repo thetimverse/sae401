@@ -65,7 +65,7 @@ class __TwigTemplate_2f48bf17824a305cd502abf94fb26489 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello CompteController!";
+        echo "CodeNames - Profil";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -85,28 +85,36 @@ class __TwigTemplate_2f48bf17824a305cd502abf94fb26489 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
+        echo "
 <div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+    <h1>Mon profil</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/sae401/site_accueil/src/Controller/CompteController.php", 0), "html", null, true);
-        echo "\">src/Controller/CompteController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/sae401/site_accueil/templates/compte/index.html.twig", 0), "html", null, true);
-        echo "\">templates/compte/index.html.twig</a></code></li>
-    </ul>
+    <div class=\"main\" id=\"profil\">
+        <img src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("img/avatars/" . twig_get_attribute($this->env, $this->source, (isset($context["avatar"]) || array_key_exists("avatar", $context) ? $context["avatar"] : (function () { throw new RuntimeError('Variable "avatar" does not exist.', 11, $this->source); })()), "image", [], "any", false, false, false, 11))), "html", null, true);
+        echo "\" id=\"avatar\">
+
+        <div>
+            ";
+        // line 14
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["parties"]) || array_key_exists("parties", $context) ? $context["parties"] : (function () { throw new RuntimeError('Variable "parties" does not exist.', 14, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["partie"]) {
+            // line 15
+            echo "            <p>Parties</p>
+            <p>";
+            // line 16
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["partie"], "dateDebut", [], "any", false, false, false, 16), "d/m/Y"), "html", null, true);
+            echo "</p>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['partie'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 18
+        echo "        </div>
+    </div>
 </div>
 ";
         
@@ -129,29 +137,30 @@ class __TwigTemplate_2f48bf17824a305cd502abf94fb26489 extends Template
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  116 => 18,  108 => 16,  105 => 15,  101 => 14,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello CompteController!{% endblock %}
+{% block title %}CodeNames - Profil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Mon profil</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/var/www/sae401/site_accueil/src/Controller/CompteController.php'|file_link(0) }}\">src/Controller/CompteController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/var/www/sae401/site_accueil/templates/compte/index.html.twig'|file_link(0) }}\">templates/compte/index.html.twig</a></code></li>
-    </ul>
+    <div class=\"main\" id=\"profil\">
+        <img src=\"{{ asset('img/avatars/' ~ avatar.image) }}\" id=\"avatar\">
+
+        <div>
+            {% for partie in parties %}
+            <p>Parties</p>
+            <p>{{ partie.dateDebut|date('d/m/Y') }}</p>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}
 ", "compte/index.html.twig", "/var/www/sae401/site_accueil/templates/compte/index.html.twig");

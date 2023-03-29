@@ -11,8 +11,16 @@ class CompteController extends AbstractController
     #[Route('/compte', name: 'app_compte')]
     public function index(): Response
     {
+        $user = $this->getUser();
+        if ($user==null) {
+            return $this->redirectToRoute('app_login', []);
+        }
+        $parties=$user->getParties();
+        $avatar=$user->getAvatar();
+
         return $this->render('compte/index.html.twig', [
-            'controller_name' => 'CompteController',
+            'parties' => $parties,
+            'avatar' => $avatar,
         ]);
     }
 }
