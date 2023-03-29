@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerHJH3Rkp/getDebug_ApiPlatform_ArgumentResolver_PayloadService.php
 namespace ContainerHJH3Rkp;
-========
-namespace ContainerF4yJFeN;
-
->>>>>>>> main:site_accueil/var/cache/dev/ContainerF4yJFeN/getDebug_ApiPlatform_ArgumentResolver_PayloadService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;

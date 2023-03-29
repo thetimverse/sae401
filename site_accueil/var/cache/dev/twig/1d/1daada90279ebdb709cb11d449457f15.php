@@ -58,26 +58,26 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         // line 9
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 13
+        // line 12
         echo "
         ";
-        // line 14
+        // line 13
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 17
+        // line 15
         echo "    </head>
     <body>
 ";
-        // line 22
+        // line 20
         echo "<img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/dots3.png"), "html", null, true);
         echo "\" class=\"overlay\">
     ";
-        // line 23
+        // line 21
         $this->displayBlock('body', $context, $blocks);
-        // line 24
+        // line 22
         echo "
 ";
-        // line 28
+        // line 26
         echo "
     </body>
 </html>
@@ -120,11 +120,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 10
-        echo "            ";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
-        echo "
-            <link rel=\"stylesheet\" href=\"";
-        // line 11
+        echo "            <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\"
         ";
@@ -136,7 +132,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     }
 
-    // line 14
+    // line 13
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -146,11 +142,8 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 15
-        echo "            ";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
-        echo "
-        ";
+        // line 14
+        echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -159,7 +152,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     }
 
-    // line 23
+    // line 21
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -189,7 +182,7 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  163 => 23,  150 => 15,  140 => 14,  128 => 11,  123 => 10,  113 => 9,  94 => 5,  81 => 28,  78 => 24,  76 => 23,  71 => 22,  67 => 17,  65 => 14,  62 => 13,  59 => 9,  53 => 5,  47 => 1,);
+        return array (  156 => 21,  146 => 14,  136 => 13,  123 => 10,  113 => 9,  94 => 5,  81 => 26,  78 => 22,  76 => 21,  71 => 20,  67 => 15,  65 => 13,  62 => 12,  59 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -203,12 +196,10 @@ class __TwigTemplate_b1ae54cde74048b6e096a234bf4bc9e9 extends Template
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
             <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\"
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>

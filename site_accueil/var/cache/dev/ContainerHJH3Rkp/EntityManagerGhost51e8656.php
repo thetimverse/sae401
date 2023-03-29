@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerHJH3Rkp/EntityManagerGhost51e8656.php
 namespace ContainerHJH3Rkp;
-========
-namespace ContainerF4yJFeN;
->>>>>>>> main:site_accueil/var/cache/dev/ContainerF4yJFeN/EntityManagerGhost51e8656.php
 include_once \dirname(__DIR__, 4).'/vendor/doctrine/persistence/src/Persistence/ObjectManager.php';
 include_once \dirname(__DIR__, 4).'/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManagerInterface.php';
 include_once \dirname(__DIR__, 4).'/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php';

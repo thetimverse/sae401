@@ -110,11 +110,21 @@ a {
 }
 
 /* PROFIL */
+#profil {
+    margin: 0 150px;
+}
+
 #profil #avatar {
     width: 100px;
     border-radius: 5px;
     margin: auto;
     display: block;
+}
+
+#profil div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* BOUTONS */

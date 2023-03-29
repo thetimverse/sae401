@@ -162,8 +162,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return array_merge($this->getPartiesJ1()->toArray(), $this->getPartiesJ2()->toArray());
     }
 
-
-
     public function getAvatar(): ?Avatars
     {
         return $this->avatar;

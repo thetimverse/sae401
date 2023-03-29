@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerHJH3Rkp/getDebug_ArgumentResolver_NotTaggedControllerService.php
 namespace ContainerHJH3Rkp;
-========
-namespace ContainerF4yJFeN;
-
->>>>>>>> main:site_accueil/var/cache/dev/ContainerF4yJFeN/getDebug_ArgumentResolver_NotTaggedControllerService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
@@ -27,11 +22,7 @@ class getDebug_ArgumentResolver_NotTaggedControllerService extends App_KernelDev
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/NotTaggedControllerValueResolver.php';
 
-<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerHJH3Rkp/getDebug_ArgumentResolver_NotTaggedControllerService.php
         $a = ($container->privates['.service_locator.CBlT10m'] ?? $container->load('get_ServiceLocator_CBlT10mService'));
-========
-        $a = ($container->privates['.service_locator.bOPv2ec'] ?? $container->load('get_ServiceLocator_BOPv2ecService'));
->>>>>>>> main:site_accueil/var/cache/dev/ContainerF4yJFeN/getDebug_ArgumentResolver_NotTaggedControllerService.php
 
         if (isset($container->privates['debug.argument_resolver.not_tagged_controller'])) {
             return $container->privates['debug.argument_resolver.not_tagged_controller'];

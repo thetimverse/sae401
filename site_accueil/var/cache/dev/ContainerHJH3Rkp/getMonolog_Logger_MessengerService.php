@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerHJH3Rkp/getMonolog_Logger_MessengerService.php
 namespace ContainerHJH3Rkp;
-========
-namespace ContainerF4yJFeN;
-
->>>>>>>> main:site_accueil/var/cache/dev/ContainerF4yJFeN/getMonolog_Logger_MessengerService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;

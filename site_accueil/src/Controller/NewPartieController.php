@@ -28,12 +28,11 @@ class NewPartieController extends AbstractController
         UserRepository      $userRepository
     ): Response
     {
-        $joueur1 = $joueur2 = $userRepository->find(1);
         $partie = new Partie();
         $partie->setJoueur1($this->getUser()); //mettre $this->getUser()
 
         //récupération du J2 depuis le formulaire
-        $joueur2 = $userRepository->find(2);
+        $joueur2 = $userRepository->find(5);
         $partie->setJoueur2($joueur2);
         $partie->setTour($this->getUser());//mettre $this->getUser()
         $partie->setEtat('en cours');

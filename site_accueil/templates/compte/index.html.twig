@@ -8,14 +8,16 @@
     <h1>Mon profil</h1>
 
     <div class="main" id="profil">
-        <img src="{{ asset('img/avatars/' ~ avatar.image) }}" id="avatar">
+        <img src="{{ asset('img/avatars/' ~ user.avatar.image) }}" id="avatar">
 
-        <div>
+        <div class="parties">
             <h2>Parties</h2>
-            {% for partie in parties %}
+            {% for partie in user.parties %}
                 <div>
                     <p>{{ partie.dateDebut|date('d/m/Y') }}</p>
-                    <p></p>
+                    <p>{{ partie.etat }}</p>
+                    <p>{{ partie.tour.username }}</p>
+                    <p>{{ partie.joueur2 != null ? partie.joueur2.username : 'Vide' }}</p>
                 </div>
             {% endfor %}
         </div>

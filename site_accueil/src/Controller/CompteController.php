@@ -19,8 +19,7 @@ class CompteController extends AbstractController
         $avatar=$user->getAvatar();
 
         return $this->render('compte/index.html.twig', [
-            'parties' => $parties,
-            'avatar' => $avatar,
+            'user' => $user
         ]);
     }
 }
