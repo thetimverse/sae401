@@ -114,18 +114,35 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
     <div id=\"home\" class=\"main\">
         <img src=\"";
         // line 19
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/codenames-13.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/codenames-13.png"), "html", null, true);
         echo "\" alt=\"logo\" id=\"logo\">
+        <img src=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/marvel3.png"), "html", null, true);
+        echo "\" alt=\"logo marvel\" id=\"logo-marvel\">
 
 
         <div id=\"home-btn\">
-            <a href=\"#\" class=\"btn btn-primary\">Créer une partie</a>
+            <a href=\"";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_new_partie");
+        echo "\" class=\"btn btn-primary\">Créer une partie</a>
             <a href=\"#\" class=\"btn btn-secondary\">Les règles</a>
         </div>
 
+    </div>
+        <div id=\"banner\">
+            <img src=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/ironman-full.png"), "html", null, true);
+        echo "\" alt=\"banner\">
+            <img src=\"";
+        // line 31
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/spidey-nwh-jump.png"), "html", null, true);
+        echo "\" alt=\"banner\">
 ";
-        // line 32
-        echo "    </div>
+        // line 35
+        echo "        </div>
 
 
 
@@ -153,7 +170,7 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  128 => 32,  117 => 19,  110 => 14,  105 => 12,  100 => 11,  94 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  145 => 35,  141 => 31,  137 => 30,  128 => 24,  121 => 20,  117 => 19,  110 => 14,  105 => 12,  100 => 11,  94 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -176,20 +193,23 @@ class __TwigTemplate_9b8d3c6b8aa05977eed83c6a1ef418d2 extends Template
 
 
     <div id=\"home\" class=\"main\">
-        <img src=\"{{ asset('images/codenames-13.png') }}\" alt=\"logo\" id=\"logo\">
+        <img src=\"{{ asset('img/codenames-13.png') }}\" alt=\"logo\" id=\"logo\">
+        <img src=\"{{ asset('img/marvel3.png') }}\" alt=\"logo marvel\" id=\"logo-marvel\">
 
 
         <div id=\"home-btn\">
-            <a href=\"#\" class=\"btn btn-primary\">Créer une partie</a>
+            <a href=\"{{ path('app_new_partie') }}\" class=\"btn btn-primary\">Créer une partie</a>
             <a href=\"#\" class=\"btn btn-secondary\">Les règles</a>
         </div>
 
-{#        <div id=\"banner\">
-            <img src=\"../images/ironman-flying-comics.png\" alt=\"banner\">
-            <img src=\"../images/spidey-nwh-jump.png\" alt=\"banner\">
-            <img src=\"../images/Groot.webp\" alt=\"banner\">
-        </div>#}
     </div>
+        <div id=\"banner\">
+            <img src=\"{{ asset('img/ironman-full.png') }}\" alt=\"banner\">
+            <img src=\"{{ asset('img/spidey-nwh-jump.png') }}\" alt=\"banner\">
+{#
+            <img src=\"../img/Groot.webp\" alt=\"banner\">
+#}
+        </div>
 
 
 

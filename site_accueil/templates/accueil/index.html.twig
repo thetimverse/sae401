@@ -16,20 +16,23 @@
 
 
     <div id="home" class="main">
-        <img src="{{ asset('images/codenames-13.png') }}" alt="logo" id="logo">
+        <img src="{{ asset('img/codenames-13.png') }}" alt="logo" id="logo">
+        <img src="{{ asset('img/marvel3.png') }}" alt="logo marvel" id="logo-marvel">
 
 
         <div id="home-btn">
-            <a href="#" class="btn btn-primary">Créer une partie</a>
+            <a href="{{ path('app_new_partie') }}" class="btn btn-primary">Créer une partie</a>
             <a href="#" class="btn btn-secondary">Les règles</a>
         </div>
 
-{#        <div id="banner">
-            <img src="../images/ironman-flying-comics.png" alt="banner">
-            <img src="../images/spidey-nwh-jump.png" alt="banner">
-            <img src="../images/Groot.webp" alt="banner">
-        </div>#}
     </div>
+        <div id="banner">
+            <img src="{{ asset('img/ironman-full.png') }}" alt="banner">
+            <img src="{{ asset('img/spidey-nwh-jump.png') }}" alt="banner">
+{#
+            <img src="../img/Groot.webp" alt="banner">
+#}
+        </div>
 
 
 

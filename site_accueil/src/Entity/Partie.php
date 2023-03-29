@@ -18,16 +18,16 @@ class Partie
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'parties')]
+    #[ORM\ManyToOne(inversedBy: 'partiesJ1')]
     private ?User $joueur1 = null;
 
-    #[ORM\ManyToOne(inversedBy: 'parties')]
+    #[ORM\ManyToOne(inversedBy: 'partiesJ2')]
     private ?User $joueur2 = null;
 
     #[ORM\Column(length: 255)]
     private ?string $etat = null;
 
-    #[ORM\ManyToOne(inversedBy: 'parties')]
+    #[ORM\ManyToOne(inversedBy: 'partiesTour')]
     private ?User $tour = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
@@ -38,6 +38,7 @@ class Partie
 
     #[ORM\OneToMany(mappedBy: 'partie', targetEntity: MotPartie::class)]
     private Collection $motParties;
+
 
     public function __construct()
     {
@@ -150,4 +151,5 @@ class Partie
 
         return $this;
     }
+
 }

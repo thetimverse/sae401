@@ -16,6 +16,7 @@ html, body {
 body{
     background-color: #649aa2;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .main {
@@ -44,8 +45,15 @@ a {
 
 #logo {
     display: block;
-    margin: auto;
+    margin: 10% auto 0 auto;
     width: 60%;
+}
+
+#logo-marvel {
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    /*opacity: 0.85;*/
 }
 
 #home {
@@ -55,8 +63,8 @@ a {
     flex-direction: column;
     padding: 4em;
     min-height: 70vh;
-    background: url("../images/spidey-nwh-jump.png") no-repeat;
-    background-size: 40%;
+    /*background: url("../img/spidey-nwh-jump.png") no-repeat;*/
+    /*background-size: 40%;*/
 }
 
 .overlay {
@@ -69,30 +77,44 @@ a {
     opacity: .5;
 }
 
-#banner {
+/*#banner {
     display: flex;
     align-items: end;
     justify-content: center;
     width: 100%;
-    /*overflow: hidden;*/
+    !*overflow: hidden;*!
     position: relative;
     z-index: 1;
+}*/
+
+#banner {
+    z-index: 5;
 }
 
 #banner img:nth-child(1) {
-    width: 35%;
-    align-self: start;
+    width: 20%;
+    position: absolute;
+    top: 90px;
+    left: -20px;
 }
 
 #banner img:nth-child(2) {
-    position: relative;
-    z-index: 1;
-    width: 30%;
-    align-self: center;
+    position: absolute;
+    width: 35%;
+    top: 135px;
+    right: -70px;
 }
 
 #banner img:nth-child(3){
     width: 25%;
+}
+
+/* PROFIL */
+#profil #avatar {
+    width: 100px;
+    border-radius: 5px;
+    margin: auto;
+    display: block;
 }
 
 /* BOUTONS */
