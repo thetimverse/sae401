@@ -1,0 +1,9 @@
+038e46,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680082830,,302
+fe5de6,172.18.0.1,GET,http://localhost:8088/sae401/index.php/login,1680082831,,200
+d1b3fe,172.18.0.1,POST,http://localhost:8088/sae401/index.php/login,1680082904,,302
+731992,172.18.0.1,GET,http://localhost:8088/sae401/index.php/,1680082905,,200
+6b947c,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680082909,fea476,500
+fea476,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680082909,,500
+bdca68,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680083132,f6f72c,500
+f6f72c,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680083132,,500
+25519c,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680083149,,200
