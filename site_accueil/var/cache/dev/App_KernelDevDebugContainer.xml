@@ -3029,14 +3029,6 @@
         <argument>-100</argument>
       </call>
       <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerRunningEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.dispatch_pcntl_signal_listener"/>
-          <argument>onWorkerRunning</argument>
-        </argument>
-        <argument>100</argument>
-      </call>
-      <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="messenger.listener.stop_worker_on_restart_signal_listener"/>
@@ -3051,14 +3043,6 @@
           <argument>onWorkerRunning</argument>
         </argument>
         <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.stop_worker_on_sigterm_signal_listener"/>
-          <argument>onWorkerStarted</argument>
-        </argument>
-        <argument>100</argument>
       </call>
       <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerMessageFailedEvent</argument>
@@ -8061,16 +8045,10 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
-<<<<<<< HEAD
     <service id=".service_locator.cr4atru" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="entityManagerInterface" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-=======
-    <service id=".service_locator.XvT4AnJ" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
->>>>>>> main
         <argument key="motPartieRepository" type="service_closure" id="App\Repository\MotPartieRepository"/>
         <argument key="motRepository" type="service_closure" id="App\Repository\MotRepository"/>
         <argument key="partieRepository" type="service_closure" id="App\Repository\PartieRepository"/>
@@ -8112,17 +8090,10 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-<<<<<<< HEAD
     <service id=".service_locator.CBlT10m" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\NewPartieController::index" type="service_closure" id=".service_locator.cr4atru"/>
-=======
-    <service id=".service_locator.bOPv2ec" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Controller\NewPartieController::index" type="service_closure" id=".service_locator.XvT4AnJ"/>
->>>>>>> main
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.v.Ev_hT"/>
         <argument key="App\Controller\RegistrationController::verifyUserEmail" type="service_closure" id=".service_locator.1Z9fEX7"/>
         <argument key="App\Controller\ResetPasswordController::request" type="service_closure" id=".service_locator.EE0.cm9"/>
@@ -8132,11 +8103,7 @@
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
-<<<<<<< HEAD
         <argument key="App\Controller\NewPartieController:index" type="service_closure" id=".service_locator.cr4atru"/>
-=======
-        <argument key="App\Controller\NewPartieController:index" type="service_closure" id=".service_locator.XvT4AnJ"/>
->>>>>>> main
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.v.Ev_hT"/>
         <argument key="App\Controller\RegistrationController:verifyUserEmail" type="service_closure" id=".service_locator.1Z9fEX7"/>
         <argument key="App\Controller\ResetPasswordController:request" type="service_closure" id=".service_locator.EE0.cm9"/>
@@ -9208,20 +9175,12 @@
       <argument type="service" id="api_platform.serializer.context_builder.filter"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-<<<<<<< HEAD
       <argument type="service" id=".service_locator.CBlT10m"/>
-=======
-      <argument type="service" id=".service_locator.bOPv2ec"/>
->>>>>>> main
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-<<<<<<< HEAD
       <argument type="service" id=".service_locator.CBlT10m"/>
-=======
-      <argument type="service" id=".service_locator.bOPv2ec"/>
->>>>>>> main
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -10324,11 +10283,7 @@
     <service id="ApiPlatform\Symfony\Security\ResourceAccessCheckerInterface" alias="api_platform.security.resource_access_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-<<<<<<< HEAD
     <service id="argument_resolver.controller_locator" alias=".service_locator.CBlT10m"/>
-=======
-    <service id="argument_resolver.controller_locator" alias=".service_locator.bOPv2ec"/>
->>>>>>> main
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -10352,15 +10307,9 @@
     <service id=".service_locator.XDGmiR3" alias=".1_ServiceLocator~ZkihXYt"/>
     <service id=".service_locator.bnaLdkn" alias="api_platform.serializer_locator"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
-<<<<<<< HEAD
     <service id=".service_locator.dZDdKla" alias=".service_locator.cr4atru"/>
     <service id=".service_locator.TFYbZQh" alias=".service_locator.v.Ev_hT"/>
     <service id=".service_locator.2P5.i86" alias=".service_locator.CBlT10m"/>
-=======
-    <service id=".service_locator.4oRJwaQ" alias=".service_locator.XvT4AnJ"/>
-    <service id=".service_locator.TFYbZQh" alias=".service_locator.v.Ev_hT"/>
-    <service id=".service_locator.CR1O.7V" alias=".service_locator.bOPv2ec"/>
->>>>>>> main
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.kcPp2BX" alias=".service_locator.4sfG50J"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -10470,11 +10419,7 @@
     <service id="api_platform.metadata.resource.metadata_collection_factory.cached.inner" alias="api_platform.doctrine.orm.metadata.resource.metadata_collection_factory"/>
     <service id=".service_locator.Xbsa8iG" alias="api_platform.filter_locator"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
-<<<<<<< HEAD
     <service id=".service_locator.mQS3he5" alias=".service_locator.cr4atru"/>
-=======
-    <service id=".service_locator.YLc6H8U" alias=".service_locator.XvT4AnJ"/>
->>>>>>> main
     <service id=".service_locator.5UN.R0P" alias=".service_locator.v.Ev_hT"/>
     <service id=".service_locator.5cKt1SW" alias=".service_locator.1Z9fEX7"/>
     <service id=".service_locator.ostNlSn" alias=".service_locator.EE0.cm9"/>
