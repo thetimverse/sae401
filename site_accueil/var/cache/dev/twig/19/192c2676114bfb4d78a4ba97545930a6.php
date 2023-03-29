@@ -95,7 +95,7 @@ class __TwigTemplate_2f48bf17824a305cd502abf94fb26489 extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("img/avatars/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 11, $this->source); })()), "avatar", [], "any", false, false, false, 11), "image", [], "any", false, false, false, 11))), "html", null, true);
         echo "\" id=\"avatar\">
 
-        <div>
+        <div class=\"parties\">
             <h2>Parties</h2>
             ";
         // line 15
@@ -168,7 +168,7 @@ class __TwigTemplate_2f48bf17824a305cd502abf94fb26489 extends Template
     <div class=\"main\" id=\"profil\">
         <img src=\"{{ asset('img/avatars/' ~ user.avatar.image) }}\" id=\"avatar\">
 
-        <div>
+        <div class=\"parties\">
             <h2>Parties</h2>
             {% for partie in user.parties %}
                 <div>
