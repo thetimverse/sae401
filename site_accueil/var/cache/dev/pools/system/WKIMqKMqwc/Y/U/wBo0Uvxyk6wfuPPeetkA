@@ -1,7 +1,3 @@
 <?php //%5BC%5DApp%255CEntity%255CUser%2523__construct
 
-<<<<<<< Updated upstream
 return [PHP_INT_MAX, 1680084299];
-=======
-return [PHP_INT_MAX, 1680085254];
->>>>>>> Stashed changes
