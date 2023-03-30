@@ -43,3 +43,7 @@ ada979,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680090382,,
 2a06eb,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680090397,,200
 bc6fa1,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680090419,,200
 77cd16,172.18.0.1,GET,http://localhost:8088/sae401/index.php/compte,1680090526,,200
+974b88,172.18.0.1,GET,http://localhost:8088/sae401/index.php/inscription,1680162489,f4f1c7,500
+f4f1c7,172.18.0.1,GET,http://localhost:8088/sae401/index.php/inscription,1680162489,,500
+b97c26,172.18.0.1,GET,http://localhost:8088/sae401/index.php/,1680162507,e36818,500
+e36818,172.18.0.1,GET,http://localhost:8088/sae401/index.php/,1680162507,,500
