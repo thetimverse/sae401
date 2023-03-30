@@ -116,9 +116,18 @@ class __TwigTemplate_c38d11fb116f8af1715a646046bfa39f extends Template
         // line 16
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 16, $this->source); })()), "username", [], "any", false, false, false, 16), 'row');
         echo "
+<<<<<<< Updated upstream
 ";
         // line 18
         echo "        ";
+=======
+        ";
+        // line 17
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 17, $this->source); })()), "avatar", [], "any", false, false, false, 17), 'row');
+        echo "
+        ";
+        // line 18
+>>>>>>> Stashed changes
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 18, $this->source); })()), "plainPassword", [], "any", false, false, false, 18), 'row', ["label" => "Mot de passe"]);
         // line 20
         echo "
@@ -154,7 +163,11 @@ class __TwigTemplate_c38d11fb116f8af1715a646046bfa39f extends Template
 
     public function getDebugInfo()
     {
+<<<<<<< Updated upstream
         return array (  133 => 24,  127 => 21,  124 => 20,  121 => 18,  117 => 16,  113 => 15,  109 => 14,  102 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+=======
+        return array (  136 => 24,  130 => 21,  127 => 20,  125 => 18,  121 => 17,  117 => 16,  113 => 15,  109 => 14,  102 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+>>>>>>> Stashed changes
     }
 
     public function getSourceContext()
@@ -175,7 +188,11 @@ class __TwigTemplate_c38d11fb116f8af1715a646046bfa39f extends Template
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.username) }}
+<<<<<<< Updated upstream
 {#        {{ form_row(registrationForm.avatar) }}#}
+=======
+        {{ form_row(registrationForm.avatar) }}
+>>>>>>> Stashed changes
         {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe'
         }) }}
