@@ -18,6 +18,7 @@
                     <p>{{ partie.etat }}</p>
                     <p>{{ partie.tour.username }}</p>
                     <p>{{ partie.joueur2 != null ? partie.joueur2.username : 'Vide' }}</p>
+                    <a href="/jeu/jeu/{{ partie.id }}/{{ partie.joueur1.id }}" class="btn btn-primary">Jouer</a>
                 </div>
             {% endfor %}
         </div>
