@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb
--- Generation Time: Mar 27, 2023 at 05:16 PM
+-- Generation Time: Mar 30, 2023 at 09:50 AM
 -- Server version: 10.8.4-MariaDB-1:10.8.4+maria~ubu2204
 -- PHP Version: 8.0.23
 
@@ -20,6 +20,57 @@ SET time_zone = "+00:00";
 --
 -- Database: `sae401`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `avatars`
+--
+
+CREATE TABLE `avatars` (
+  `id` int(11) NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `avatars`
+--
+
+INSERT INTO `avatars` (`id`, `image`) VALUES
+(1, 'black-panther.jpeg'),
+(2, 'black-widow-2.jpg'),
+(3, 'black-widow.jpg'),
+(4, 'bucky-barnes-2.jpg'),
+(5, 'bucky-barnes.jpg'),
+(6, 'captain-marvel.jpg'),
+(7, 'clint-barton.jpg'),
+(8, 'cyclops.jpg'),
+(9, 'daredevil.jpeg'),
+(10, 'deadpool.jpg'),
+(11, 'doctor-strange.jpg'),
+(12, 'hulk.jpg'),
+(13, 'iron-man.png'),
+(14, 'kate-bishop.jpg'),
+(15, 'magneto.jpg'),
+(16, 'miles-morales-2.jpg'),
+(17, 'miles-morales.jpeg'),
+(18, 'moonknight-2.jpg'),
+(19, 'moonknight.jpg'),
+(20, 'quicksilver.jpeg'),
+(21, 'sam-wilson-2.jpg'),
+(22, 'sam-wilson.jpg'),
+(23, 'scarlet-witch.jpeg'),
+(24, 'silk.jpeg'),
+(25, 'spider-woman.jpeg'),
+(26, 'spiderman-2.jpg'),
+(27, 'spiderman-3.jpg'),
+(28, 'spiderman.jpg'),
+(29, 'steve-rogers.jpg'),
+(30, 'storm.jpeg'),
+(31, 'thor-2.jpg'),
+(32, 'thor.jpg'),
+(33, 'wiccan.jpeg'),
+(34, 'wolverine.jpeg');
 
 -- --------------------------------------------------------
 
@@ -41,7 +92,8 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 ('DoctrineMigrations\\Version20230308134425', '2023-03-08 13:44:41', 46),
 ('DoctrineMigrations\\Version20230308141317', '2023-03-08 14:13:29', 48),
 ('DoctrineMigrations\\Version20230309134747', '2023-03-09 13:47:58', 57),
-('DoctrineMigrations\\Version20230313132131', '2023-03-14 10:21:21', 82);
+('DoctrineMigrations\\Version20230313132131', '2023-03-14 10:21:21', 82),
+('DoctrineMigrations\\Version20230329075935', '2023-03-29 07:59:54', 90);
 
 -- --------------------------------------------------------
 
@@ -404,6 +456,62 @@ CREATE TABLE `mot_partie` (
   `trouve` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `mot_partie`
+--
+
+INSERT INTO `mot_partie` (`id`, `mot_id`, `partie_id`, `position`, `couleur_j1`, `couleur_j2`, `jeton_j1`, `jeton_j2`, `trouve`) VALUES
+(1, 112, 2, 0, 'Vert', 'Vert', 0, 0, 0),
+(2, 137, 2, 1, 'Noir', 'Noir', 0, 0, 0),
+(3, 282, 2, 2, 'Neutre', 'Neutre', 0, 0, 0),
+(4, 182, 2, 3, 'Vert', 'Neutre', 0, 0, 0),
+(5, 142, 2, 4, 'Neutre', 'Neutre', 0, 0, 0),
+(6, 213, 2, 5, 'Neutre', 'Neutre', 0, 0, 0),
+(7, 16, 2, 6, 'Noir', 'Neutre', 0, 0, 0),
+(8, 61, 2, 7, 'Noir', 'Vert', 0, 0, 0),
+(9, 52, 2, 8, 'Vert', 'Vert', 0, 0, 0),
+(10, 181, 2, 9, 'Neutre', 'Noir', 0, 0, 0),
+(11, 159, 2, 10, 'Neutre', 'Neutre', 0, 0, 0),
+(12, 27, 2, 11, 'Vert', 'Neutre', 0, 0, 0),
+(13, 11, 2, 12, 'Vert', 'Neutre', 0, 0, 0),
+(14, 261, 2, 13, 'Neutre', 'Neutre', 0, 0, 0),
+(15, 285, 2, 14, 'Neutre', 'Neutre', 0, 0, 0),
+(16, 25, 2, 15, 'Neutre', 'Vert', 0, 0, 0),
+(17, 73, 2, 16, 'Neutre', 'Vert', 0, 0, 0),
+(18, 85, 2, 17, 'Neutre', 'Vert', 0, 0, 0),
+(19, 223, 2, 18, 'Neutre', 'Neutre', 0, 0, 0),
+(20, 240, 2, 19, 'Vert', 'Noir', 0, 0, 0),
+(21, 118, 2, 20, 'Vert', 'Neutre', 0, 0, 0),
+(22, 252, 2, 21, 'Neutre', 'Vert', 0, 0, 0),
+(23, 156, 2, 22, 'Vert', 'Neutre', 0, 0, 0),
+(24, 174, 2, 23, 'Neutre', 'Vert', 0, 0, 0),
+(25, 277, 2, 24, 'Vert', 'Vert', 0, 0, 0),
+(26, 185, 3, 0, 'Bleu', 'Bleu', 0, 0, 0),
+(27, 29, 3, 1, 'Bleu', 'Bleu', 0, 0, 0),
+(28, 19, 3, 2, 'Neutre', 'Bleu', 0, 0, 0),
+(29, 160, 3, 3, 'Neutre', 'Neutre', 0, 0, 0),
+(30, 139, 3, 4, 'Neutre', 'Neutre', 0, 0, 0),
+(31, 66, 3, 5, 'Noir', 'Neutre', 0, 0, 0),
+(32, 116, 3, 6, 'Neutre', 'Neutre', 0, 0, 0),
+(33, 272, 3, 7, 'Bleu', 'Neutre', 0, 0, 0),
+(34, 28, 3, 8, 'Neutre', 'Bleu', 0, 0, 0),
+(35, 183, 3, 9, 'Neutre', 'Neutre', 0, 0, 0),
+(36, 163, 3, 10, 'Bleu', 'Neutre', 0, 0, 0),
+(37, 78, 3, 11, 'Neutre', 'Bleu', 0, 0, 0),
+(38, 131, 3, 12, 'Noir', 'Noir', 0, 0, 0),
+(39, 191, 3, 13, 'Noir', 'Bleu', 0, 0, 0),
+(40, 184, 3, 14, 'Bleu', 'Noir', 0, 0, 0),
+(41, 225, 3, 15, 'Bleu', 'Bleu', 0, 0, 0),
+(42, 206, 3, 16, 'Neutre', 'Neutre', 0, 0, 0),
+(43, 169, 3, 17, 'Bleu', 'Neutre', 0, 0, 0),
+(44, 300, 3, 18, 'Neutre', 'Noir', 0, 0, 0),
+(45, 144, 3, 19, 'Neutre', 'Neutre', 0, 0, 0),
+(46, 42, 3, 20, 'Bleu', 'Neutre', 0, 0, 0),
+(47, 49, 3, 21, 'Neutre', 'Bleu', 0, 0, 0),
+(48, 270, 3, 22, 'Neutre', 'Bleu', 0, 0, 0),
+(49, 264, 3, 23, 'Bleu', 'Neutre', 0, 0, 0),
+(50, 12, 3, 24, 'Neutre', 'Neutre', 0, 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -419,6 +527,15 @@ CREATE TABLE `partie` (
   `date_debut` datetime NOT NULL,
   `resultat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `partie`
+--
+
+INSERT INTO `partie` (`id`, `joueur1_id`, `joueur2_id`, `tour_id`, `etat`, `date_debut`, `resultat`) VALUES
+(1, 4, NULL, 4, 'en cours', '2023-03-29 10:20:53', ''),
+(2, 4, NULL, 4, 'en cours', '2023-03-29 10:22:31', ''),
+(3, 4, 5, 4, 'en cours', '2023-03-29 12:34:04', '');
 
 -- --------------------------------------------------------
 
@@ -454,22 +571,28 @@ CREATE TABLE `user` (
   `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `roles` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json)',
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `is_verified` tinyint(1) NOT NULL
+  `is_verified` tinyint(1) NOT NULL,
+  `avatar_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `username`, `roles`, `password`, `avatar`, `is_verified`) VALUES
-(1, 'timothee.pluot@gmail.com', 'tim', '[\"ROLE_ADMIN\"]', '$2y$13$dkZe0G4JQwUTSVAYqxE2BuHWU/hGGuM/frpLxVo53xQDmijNDgtTm', '', 0),
-(4, 'tim.mockingjay09@gmail.com', 'timothee', '[]', '$2y$13$VdWdrcCYdH4GYjx0fX/JOejSVfKfPmCmdnxYkV8LAf3J5aYYFhmMS', '/tmp/phpUSpK5O', 0),
-(5, 'julie.van-houdenhove@etudiant.univ-reims.fr', 'Julie VH', '[]', '$2y$13$IgmzCLBaONKIZzSNRWfwBe1ykRzN.EbOkAcmkElZ..bQji9P3gSXe', '/tmp/phpxEr7nL', 0);
+INSERT INTO `user` (`id`, `email`, `username`, `roles`, `password`, `is_verified`, `avatar_id`) VALUES
+(1, 'timothee.pluot@gmail.com', 'tim', '[\"ROLE_ADMIN\"]', '$2y$13$dkZe0G4JQwUTSVAYqxE2BuHWU/hGGuM/frpLxVo53xQDmijNDgtTm', 0, 2),
+(4, 'tim.mockingjay09@gmail.com', 'timothee', '[]', '$2y$13$VdWdrcCYdH4GYjx0fX/JOejSVfKfPmCmdnxYkV8LAf3J5aYYFhmMS', 0, 17),
+(5, 'julie.van-houdenhove@etudiant.univ-reims.fr', 'Julie VH', '[]', '$2y$13$IgmzCLBaONKIZzSNRWfwBe1ykRzN.EbOkAcmkElZ..bQji9P3gSXe', 0, 34);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `avatars`
+--
+ALTER TABLE `avatars`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `doctrine_migration_versions`
@@ -521,11 +644,18 @@ ALTER TABLE `reset_password_request`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`);
+  ADD UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`),
+  ADD KEY `IDX_8D93D64986383B10` (`avatar_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `avatars`
+--
+ALTER TABLE `avatars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `messenger_messages`
@@ -543,13 +673,13 @@ ALTER TABLE `mot`
 -- AUTO_INCREMENT for table `mot_partie`
 --
 ALTER TABLE `mot_partie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `partie`
 --
 ALTER TABLE `partie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `reset_password_request`
@@ -587,6 +717,12 @@ ALTER TABLE `partie`
 --
 ALTER TABLE `reset_password_request`
   ADD CONSTRAINT `FK_7CE748AA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `FK_8D93D64986383B10` FOREIGN KEY (`avatar_id`) REFERENCES `avatars` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

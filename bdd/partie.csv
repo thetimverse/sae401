@@ -1,0 +1,4 @@
+"id","joueur1_id","joueur2_id","tour_id","etat","date_debut","resultat"
+"1","4",NULL,"4","en cours","2023-03-29 10:20:53",
+"2","4",NULL,"4","en cours","2023-03-29 10:22:31",
+"3","4","5","4","en cours","2023-03-29 12:34:04",
