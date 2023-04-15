@@ -87,7 +87,7 @@ class __TwigTemplate_f86ca16bec361c4cf908d995a120cd47 extends Template
         // line 6
         echo "
 <div class=\"example-wrapper\">
-    <h1>Mon profil</h1>
+    <h1>Profil</h1>
 
     <div class=\"main\" id=\"profil\">
         <img src=\"";
@@ -169,7 +169,7 @@ class __TwigTemplate_f86ca16bec361c4cf908d995a120cd47 extends Template
 {% block body %}
 
 <div class=\"example-wrapper\">
-    <h1>Mon profil</h1>
+    <h1>Profil</h1>
 
     <div class=\"main\" id=\"profil\">
         <img src=\"{{ asset('img/avatars/' ~ user.avatar.image) }}\" id=\"avatar\">
