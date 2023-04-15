@@ -5,7 +5,7 @@
 {% block body %}
 
 <div class="example-wrapper">
-    <h1>Mon profil</h1>
+    <h1>Profil</h1>
 
     <div class="main" id="profil">
         <img src="{{ asset('img/avatars/' ~ user.avatar.image) }}" id="avatar">
@@ -18,6 +18,7 @@
                     <p>{{ partie.etat }}</p>
                     <p>{{ partie.tour.username }}</p>
                     <p>{{ partie.joueur2 != null ? partie.joueur2.username : 'Vide' }}</p>
+                    <a href="/jeu/jeu/{{ partie.id }}/{{ partie.joueur1.id }}" class="btn btn-primary">Jouer</a>
                 </div>
             {% endfor %}
         </div>
