@@ -7,7 +7,7 @@ namespace Proxies\__CG__\App\Entity;
  */
 class Avatars extends \App\Entity\Avatars implements \Doctrine\Persistence\Proxy
 {
-    use \Symfony\Component\VarExporter\LazyGhostTrait {
+     use \Symfony\Component\VarExporter\LazyGhostTrait {
         initializeLazyObject as __load;
         setLazyObjectAsInitialized as public __setInitialized;
         isLazyObjectInitialized as private;
@@ -21,7 +21,7 @@ class Avatars extends \App\Entity\Avatars implements \Doctrine\Persistence\Proxy
         "\0".parent::class."\0".'image' => [parent::class, 'image', null],
         'id' => [parent::class, 'id', null],
         'image' => [parent::class, 'image', null],
-    ];
+    ];
 
     /**
      * @internal
