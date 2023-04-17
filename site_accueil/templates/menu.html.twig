@@ -11,7 +11,10 @@
             <a href="{{ path('app_login')}}" class="btn btn-primary">Se connecter</a>
         {% endif %}
         </div>
-
+        <ul aria-labelledby="dropdown-language">
+            <li><a href="{{ path('app-accueil', {_locale: 'en'}) }}">English</a></li>
+            <li><a href="{{ path('app-accueil', {_locale: 'fr'}) }}">Français</a></li>
+        </ul>
     </nav>
 </header>
 

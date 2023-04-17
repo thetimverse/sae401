@@ -2002,8 +2002,6 @@
             <argument>/var/www/sae401/site_accueil/vendor/symfony/security-core/Resources/translations/security.en.xlf</argument>
             <argument>/var/www/sae401/site_accueil/vendor/symfonycasts/verify-email-bundle/src/Resources/translations/VerifyEmailBundle.en.xlf</argument>
             <argument>/var/www/sae401/site_accueil/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.en.xlf</argument>
-            <argument>/var/www/sae401/site_accueil/translations/security.en.yaml</argument>
-            <argument>/var/www/sae401/site_accueil/translations/validators.en.yaml</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>/var/www/sae401/site_accueil/vendor/symfony/validator/Resources/translations/validators.es.xlf</argument>
@@ -2041,6 +2039,8 @@
             <argument>/var/www/sae401/site_accueil/vendor/symfonycasts/verify-email-bundle/src/Resources/translations/VerifyEmailBundle.fr.xlf</argument>
             <argument>/var/www/sae401/site_accueil/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.fr.xlf</argument>
             <argument>/var/www/sae401/site_accueil/translations/messages.fr.yaml</argument>
+            <argument>/var/www/sae401/site_accueil/translations/security.fr.yaml</argument>
+            <argument>/var/www/sae401/site_accueil/translations/validators.fr.yaml</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>/var/www/sae401/site_accueil/vendor/symfony/validator/Resources/translations/validators.gl.xlf</argument>
