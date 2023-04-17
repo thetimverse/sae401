@@ -23,6 +23,8 @@
     {% block body %}{% endblock %}
 
     <footer>
+        <a href="{{ path('app_accueil', {_locale: 'en'}) }}"><img src="{{ asset('img/english.png') }}"></a>
+        <a href="{{ path('app_accueil', {_locale: 'fr'}) }}"><img src="{{ asset('img/french.png') }}"></a>
         <p>&copy 2023 IUT de Troyes - <a href="{{ path('app_mentions') }}">Mentions Légales</a></p>
     </footer>
 
