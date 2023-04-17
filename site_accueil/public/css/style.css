@@ -329,6 +329,14 @@ form .btn {
     color: #e0e0e0;
 }
 
+.new {
+    margin: 0 150px;
+}
+
+.new a {
+    color: #e0e0e0;
+}
+
 /* BOUTONS */
 
 #home-btn {
