@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CodeNames - Profil{% endblock %}
+
+{% block body %}
+
+    <div class="main" id="profil">
+        <img src="{{ asset('img/avatars/' ~ user.avatar.image) }}" id="avatar">
+        <h1>{{ user.username }}</h1>
+
+        <div class="parties">
+            <h2>Informations personnelles</h2>
+            <p>E-mail : {{ user.email }}</p>
+            <p>Nom d'utilisateur : {{ user.username }}</p>
+        </div>
+
+        <div class="parties">
+            {% if user.parties is empty %}
+            <h2>Aucune partie trouvée. Si vous souhaitez créer une partie cliquez <a href="{{ path('app_new_partie') }}">ici</a>.</h2>
+            {% else %}
+            <h2>Parties</h2>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Date de début</th>
+                        <th>État</th>
+                        <th>Tour</th>
+                        <th>Joueur 2</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for partie in user.parties %}
+                        <tr>
+                            <td>{{ partie.dateDebut|date('d/m/Y') }}</td>
+                            <td>{{ partie.etat }}</td>
+                            <td>{{ partie.tour.username }}</td>
+                            <td>{{ partie.joueur2 != null ? partie.joueur2.username : 'Pas de joueur 2' }}</td>
+                            <td><a href="https://mmi21f13.sae401.ovh/jeu/{{ partie.id }}/{{ partie.joueur1.id }}">Jouer</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
