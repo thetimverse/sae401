@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerJAhxuxe/getSecurity_ChannelListenerService.php
 namespace ContainerJAhxuxe;
 
+========
+namespace ContainerM2igHfU;
+>>>>>>>> tim:site_accueil/var/cache/dev/ContainerM2igHfU/getSecurity_ChannelListenerService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;

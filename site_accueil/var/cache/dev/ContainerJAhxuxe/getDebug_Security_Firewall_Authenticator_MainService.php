@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerJAhxuxe/getDebug_Security_Firewall_Authenticator_MainService.php
 namespace ContainerJAhxuxe;
 
+========
+namespace ContainerM2igHfU;
+>>>>>>>> tim:site_accueil/var/cache/dev/ContainerM2igHfU/getDebug_Security_Firewall_Authenticator_MainService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;

@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerJAhxuxe/get_Security_Command_UserPasswordHash_LazyService.php
 namespace ContainerJAhxuxe;
 
+========
+namespace ContainerM2igHfU;
+>>>>>>>> tim:site_accueil/var/cache/dev/ContainerM2igHfU/get_Security_Command_UserPasswordHash_LazyService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;

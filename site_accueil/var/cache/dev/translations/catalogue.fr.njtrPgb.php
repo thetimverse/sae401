@@ -138,6 +138,7 @@ $catalogue = new MessageCatalogue('fr', array (
     'Please select a valid option.' => 'Veuillez sélectionner une option valide.',
     'Please select a valid range.' => 'Veuillez sélectionner une plage valide.',
     'Please enter a valid week.' => 'Veuillez entrer une semaine valide.',
+    'There is already an account with this email' => '__There is already an account with this email',
   ),
   'security' => 
   array (

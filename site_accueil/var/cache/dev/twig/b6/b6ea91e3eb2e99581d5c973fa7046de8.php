@@ -85,63 +85,37 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <header>
-        <nav>
-            ";
-        // line 8
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8)) {
-            // line 9
-            echo "            <a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_compte");
-            echo "\" class=\"btn btn-secondary\">Compte</a>
-            ";
-        } else {
-            // line 11
-            echo "            <a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            echo "\" class=\"btn btn-secondary\">S'inscrire</a>
-            <a href=\"";
-            // line 12
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\" class=\"btn btn-primary\">Se connecter</a>
-            ";
-        }
-        // line 14
-        echo "        </nav>
-    </header>
-
-
+        echo "
     <div id=\"home\" class=\"main\">
         <img src=\"";
-        // line 19
+        // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/codenames-13.png"), "html", null, true);
         echo "\" alt=\"logo\" id=\"logo\">
         <img src=\"";
-        // line 20
+        // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/marvel3.png"), "html", null, true);
         echo "\" alt=\"logo marvel\" id=\"logo-marvel\">
 
 
         <div id=\"home-btn\">
             <a href=\"";
-        // line 24
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_new_partie");
         echo "\" class=\"btn btn-primary\">Créer une partie</a>
-            <a href=\"#\" class=\"btn btn-secondary\">Les règles</a>
         </div>
 
     </div>
         <div id=\"banner\">
             <img src=\"";
-        // line 30
+        // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/ironman-full.png"), "html", null, true);
         echo "\" alt=\"banner\">
             <img src=\"";
-        // line 31
+        // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/spidey-nwh-jump.png"), "html", null, true);
         echo "\" alt=\"banner\">
 ";
-        // line 35
+        // line 23
         echo "        </div>
 
 
@@ -170,7 +144,7 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
 
     public function getDebugInfo()
     {
-        return array (  145 => 35,  141 => 31,  137 => 30,  128 => 24,  121 => 20,  117 => 19,  110 => 14,  105 => 12,  100 => 11,  94 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  119 => 23,  115 => 19,  111 => 18,  103 => 13,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -180,17 +154,6 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
 {% block title %}CodeNames - Accueil{% endblock %}
 
 {% block body %}
-    <header>
-        <nav>
-            {% if app.user %}
-            <a href=\"{{ path('app_compte')}}\" class=\"btn btn-secondary\">Compte</a>
-            {% else %}
-            <a href=\"{{ path('app_register')}}\" class=\"btn btn-secondary\">S'inscrire</a>
-            <a href=\"{{ path('app_login')}}\" class=\"btn btn-primary\">Se connecter</a>
-            {% endif %}
-        </nav>
-    </header>
-
 
     <div id=\"home\" class=\"main\">
         <img src=\"{{ asset('img/codenames-13.png') }}\" alt=\"logo\" id=\"logo\">
@@ -199,7 +162,6 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
 
         <div id=\"home-btn\">
             <a href=\"{{ path('app_new_partie') }}\" class=\"btn btn-primary\">Créer une partie</a>
-            <a href=\"#\" class=\"btn btn-secondary\">Les règles</a>
         </div>
 
     </div>

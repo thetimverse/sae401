@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerJAhxuxe/getDebug_FileLinkFormatter_UrlFormatService.php
 namespace ContainerJAhxuxe;
 
+========
+namespace ContainerM2igHfU;
+>>>>>>>> tim:site_accueil/var/cache/dev/ContainerM2igHfU/getDebug_FileLinkFormatter_UrlFormatService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;

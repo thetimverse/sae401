@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<<< HEAD:site_accueil/var/cache/dev/ContainerJAhxuxe/removed-ids.php
 namespace ContainerJAhxuxe;
+========
+namespace ContainerM2igHfU;
+>>>>>>>> tim:site_accueil/var/cache/dev/ContainerM2igHfU/removed-ids.php
 
 return [
     '.1_Serializer~LwUWJjc' => true,
@@ -8,6 +12,7 @@ return [
     '.2_ObjectNormalizer~LwUWJjc' => true,
     '.abstract.instanceof.App\\Controller\\AccueilController' => true,
     '.abstract.instanceof.App\\Controller\\CompteController' => true,
+    '.abstract.instanceof.App\\Controller\\MentionsController' => true,
     '.abstract.instanceof.App\\Controller\\NewPartieController' => true,
     '.abstract.instanceof.App\\Controller\\RegistrationController' => true,
     '.abstract.instanceof.App\\Controller\\ResetPasswordController' => true,
@@ -77,6 +82,7 @@ return [
     '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\UserRepository' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\AccueilController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\CompteController' => true,
+    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\MentionsController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\NewPartieController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\RegistrationController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ResetPasswordController' => true,
@@ -86,6 +92,7 @@ return [
     '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\ResetPasswordRequestFormType' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\AccueilController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\CompteController' => true,
+    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\MentionsController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\NewPartieController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\RegistrationController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\ResetPasswordController' => true,
@@ -142,6 +149,7 @@ return [
     '.service_locator.CshazM0' => true,
     '.service_locator.CshazM0.App\\Controller\\AccueilController' => true,
     '.service_locator.CshazM0.App\\Controller\\CompteController' => true,
+    '.service_locator.CshazM0.App\\Controller\\MentionsController' => true,
     '.service_locator.CshazM0.App\\Controller\\NewPartieController' => true,
     '.service_locator.CshazM0.App\\Controller\\RegistrationController' => true,
     '.service_locator.CshazM0.App\\Controller\\ResetPasswordController' => true,

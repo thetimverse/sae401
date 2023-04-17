@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\Avatars;
 use App\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -25,11 +27,7 @@ class RegistrationFormType extends AbstractType
                 'attr' => array('placeholder'=> 'client@mail.com'),
             ])
             ->add('username', TextType::class, [
-                'label' => 'Pseudo',
-            ])
-            ->add('avatar', FileType::class, [
-                'label' => 'Photo de profil',
-                'help' => 'Vous pouvez sélectionner une image.'
+                'label' => 'Nom d\'utilisateur',
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'label' => 'Accepter les conditions d\'utilisation',
@@ -56,6 +54,11 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                 ],
+            ])
+            ->add('avatar', EntityType::class, [
+                'label' => 'Photo de profil',
+                'class' => Avatars::class,
+                'choice_label' => 'image',
             ])
         ;
     }

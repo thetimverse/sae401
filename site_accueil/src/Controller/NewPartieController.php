@@ -28,7 +28,16 @@ class NewPartieController extends AbstractController
         UserRepository      $userRepository
     ): Response
     {
+        $user = $this->getUser();
+        if(!$user) {
+            return $this->redirectToRoute('app_login');
+        }
+
         $partie = new Partie();
+
+        //récupération de 25 mots aléatoires
+        $mots = $motRepository->findAll();
+        $tMots = [];
         $partie->setJoueur1($this->getUser()); //mettre $this->getUser()
 
         //récupération du J2 depuis le formulaire
@@ -40,10 +49,6 @@ class NewPartieController extends AbstractController
         $partie->setDateDebut(new DateTime('now', new DateTimeZone('Europe/Paris')));
 
         $partieRepository->save($partie, true);
-
-        //récupération de 25 mots aléatoires
-        $mots = $motRepository->findAll();
-        $tMots = [];
         foreach ($mots as $mot) {
             $tMots[$mot->getId()] = $mot;
         }
