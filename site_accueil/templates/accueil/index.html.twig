@@ -3,17 +3,6 @@
 {% block title %}CodeNames - Accueil{% endblock %}
 
 {% block body %}
-    <header>
-        <nav>
-            {% if app.user %}
-            <a href="{{ path('app_compte')}}" class="btn btn-secondary">Compte</a>
-            {% else %}
-            <a href="{{ path('app_register')}}" class="btn btn-secondary">S'inscrire</a>
-            <a href="{{ path('app_login')}}" class="btn btn-primary">Se connecter</a>
-            {% endif %}
-        </nav>
-    </header>
-
 
     <div id="home" class="main">
         <img src="{{ asset('img/codenames-13.png') }}" alt="logo" id="logo">
@@ -22,7 +11,6 @@
 
         <div id="home-btn">
             <a href="{{ path('app_new_partie') }}" class="btn btn-primary">Créer une partie</a>
-            <a href="#" class="btn btn-secondary">Les règles</a>
         </div>
 
     </div>

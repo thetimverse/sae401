@@ -102,14 +102,15 @@ class __TwigTemplate_236a36a76588466532dbf489426fd6e9 extends Template
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 10
         echo "    <h1>Réinitialisez votre mot de passe</h1>
+        <div class=\"form\">
 
     ";
-        // line 12
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["requestForm"]) || array_key_exists("requestForm", $context) ? $context["requestForm"] : (function () { throw new RuntimeError('Variable "requestForm" does not exist.', 12, $this->source); })()), 'form_start');
+        // line 13
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["requestForm"]) || array_key_exists("requestForm", $context) ? $context["requestForm"] : (function () { throw new RuntimeError('Variable "requestForm" does not exist.', 13, $this->source); })()), 'form_start');
         echo "
         ";
-        // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["requestForm"]) || array_key_exists("requestForm", $context) ? $context["requestForm"] : (function () { throw new RuntimeError('Variable "requestForm" does not exist.', 13, $this->source); })()), "email", [], "any", false, false, false, 13), 'row');
+        // line 14
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["requestForm"]) || array_key_exists("requestForm", $context) ? $context["requestForm"] : (function () { throw new RuntimeError('Variable "requestForm" does not exist.', 14, $this->source); })()), "email", [], "any", false, false, false, 14), 'row');
         echo "
         <div>
             <small>
@@ -120,9 +121,10 @@ class __TwigTemplate_236a36a76588466532dbf489426fd6e9 extends Template
 
         <button class=\"btn btn-primary\">Envoyer un mail de réinitialisation</button>
     ";
-        // line 22
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["requestForm"]) || array_key_exists("requestForm", $context) ? $context["requestForm"] : (function () { throw new RuntimeError('Variable "requestForm" does not exist.', 22, $this->source); })()), 'form_end');
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["requestForm"]) || array_key_exists("requestForm", $context) ? $context["requestForm"] : (function () { throw new RuntimeError('Variable "requestForm" does not exist.', 23, $this->source); })()), 'form_end');
         echo "
+        </div>
     </div>
 ";
         
@@ -145,7 +147,7 @@ class __TwigTemplate_236a36a76588466532dbf489426fd6e9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  124 => 22,  112 => 13,  108 => 12,  104 => 10,  95 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  125 => 23,  113 => 14,  109 => 13,  104 => 10,  95 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -160,6 +162,7 @@ class __TwigTemplate_236a36a76588466532dbf489426fd6e9 extends Template
         <div class=\"alert alert-danger\" role=\"alert\">{{ flash_error }}</div>
     {% endfor %}
     <h1>Réinitialisez votre mot de passe</h1>
+        <div class=\"form\">
 
     {{ form_start(requestForm) }}
         {{ form_row(requestForm.email) }}
@@ -172,6 +175,7 @@ class __TwigTemplate_236a36a76588466532dbf489426fd6e9 extends Template
 
         <button class=\"btn btn-primary\">Envoyer un mail de réinitialisation</button>
     {{ form_end(requestForm) }}
+        </div>
     </div>
 {% endblock %}
 ", "reset_password/request.html.twig", "/var/www/sae401/site_accueil/templates/reset_password/request.html.twig");

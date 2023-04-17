@@ -52,6 +52,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     'app_accueil' => [[], ['_controller' => 'App\\Controller\\AccueilController::index'], [], [['text', '/']], [], [], []],
     'app_compte' => [[], ['_controller' => 'App\\Controller\\CompteController::index'], [], [['text', '/compte']], [], [], []],
+    'app_mentions' => [[], ['_controller' => 'App\\Controller\\MentionsController::index'], [], [['text', '/mentions']], [], [], []],
     'app_new_partie' => [[], ['_controller' => 'App\\Controller\\NewPartieController::index'], [], [['text', '/new']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/inscription']], [], [], []],
     'app_verify_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], [], [['text', '/verify/email']], [], [], []],

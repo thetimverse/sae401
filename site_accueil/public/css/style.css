@@ -14,8 +14,7 @@ html, body {
 }
 
 body{
-    background-color: #649aa2;
-    overflow-y: hidden;
+    background-color: #008BD4;
     overflow-x: hidden;
 }
 
@@ -43,6 +42,69 @@ a {
     text-decoration: none;
 }
 
+.nav {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1340px;
+}
+
+.nav__logo img {
+    width: 200px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #1b1b1b;
+}
+
+.nav-menu a:nth-child(1) {
+    font-size: 1.4em;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500;
+    color: #1b1b1b;
+    text-transform: uppercase;
+    margin-right: 10px;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95), color .3s ease;
+}
+
+.nav-menu a:nth-child(1):hover {
+    color: #F5F5F5;
+    text-decoration: none;
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.nav-menu a span {
+    color: #1b1b1b;
+    transition: all .3s ease;
+}
+
+.nav-menu a span:hover {
+    color: #F5F5F5;
+}
+
+.nav-menu img {
+    width: 25px;
+    border: 1px #1b1b1b solid;
+    border-radius: 50%;
+}
+
+.nav-menu a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px;
+}
+
 #logo {
     display: block;
     margin: 10% auto 0 auto;
@@ -63,6 +125,7 @@ a {
     flex-direction: column;
     padding: 4em;
     min-height: 70vh;
+    overflow-y: hidden;
     /*background: url("../img/spidey-nwh-jump.png") no-repeat;*/
     /*background-size: 40%;*/
 }
@@ -74,7 +137,7 @@ a {
     z-index: 1;
     position: absolute;
     bottom: 0;
-    opacity: .5;
+    opacity: .3;
 }
 
 /*#banner {
@@ -109,9 +172,56 @@ a {
     width: 25%;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #0b4a6b;
+    z-index: 15;
+    height: 5vh;
+    color: #e0e0e0;
+}
+
+footer a {
+    color: #e0e0e0;
+}
+
+footer a:hover {
+    color: #F5F5F5;
+}
+
+.mentions {
+    margin: 0 150px;
+}
+
+.mentions p {
+    margin-bottom: 10px;
+}
+
+.mentions h2 {
+    text-align: center;
+}
+
+.mentions h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.mentions span {
+    font-weight: 500;
+}
+
 /* PROFIL */
 #profil {
     margin: 0 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-bottom: 80px;
 }
 
 #profil #avatar {
@@ -121,10 +231,89 @@ a {
     display: block;
 }
 
-#profil div div {
+.parties a {
+    color: #F5F5F5;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3em;
+    transition: all .3s ease;
+}
+
+.parties a:hover {
+    text-decoration: underline;
+}
+
+.parties .table th, .parties .table td {
+    border-top: 1px solid #F5F5F5;
+}
+
+.parties .table thead th{
+    border-bottom: 2px solid #F5F5F5;
+}
+
+.parties h2 {
+    margin-bottom: 20px !important;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #F5F5F5;
+}
+
+.parties {
+    background-color: rgba(11, 74, 107, 0.9);
+    padding: 20px 30px;
+    margin-top: 20px;
+    color: #e0e0e0;
+    border-radius: 10px;
+    width: 80%;
+}
+
+/* FORM */
+.form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+form {
+    width: 30%;
+    text-align: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+form div label {
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+form div input {
+    /*background-color: rgba(38, 38, 38, 0.7);*/
+    padding: 0.375rem 0.75rem;
+    color: #1b1b1b;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.registration__form form div:nth-child(5) {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+
+form .btn {
+    font-size: 1.4em;
+}
+
+.form a {
+    color: #e0e0e0;
 }
 
 /* BOUTONS */
@@ -141,20 +330,36 @@ a {
 .btn {
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
-    padding: 11px 30px;
+    padding: 8px 30px !important;
     border-radius: 10px;
     border: none;
     width: auto;
     font-size: 1.3em;
+    letter-spacing: 1px;
 }
 
 .btn-primary {
     color: #F5F5F5;
-    background-color: #4266B0;
+    background-color: #0b4a6b;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.btn-primary:hover {
+    background-color: #0b4a6b;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.btn-secondary:hover {
+    background-color: #f1f1f1;
+    color: #1b1b1b;
 }
 
 .btn-secondary {
-    color: #000000;
-    background-color: #DBDBDB;
+    color: #1b1b1b;
+    background-color: #f1f1f1;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
 }
 
