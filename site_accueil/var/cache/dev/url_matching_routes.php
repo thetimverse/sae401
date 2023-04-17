@@ -14,6 +14,7 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'app_accueil', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
         '/compte' => [[['_route' => 'app_compte', '_controller' => 'App\\Controller\\CompteController::index'], null, null, null, false, false, null]],
         '/mentions' => [[['_route' => 'app_mentions', '_controller' => 'App\\Controller\\MentionsController::index'], null, null, null, false, false, null]],
         '/new' => [[['_route' => 'app_new_partie', '_controller' => 'App\\Controller\\NewPartieController::index'], null, null, null, false, false, null]],
@@ -96,8 +97,7 @@ return [
                         .'|(*:861)'
                     .')'
                 .')'
-                .'|/(en|fr)(*:879)'
-                .'|/reset\\-password/reset(?:/([^/]++))?(*:923)'
+                .'|/reset\\-password/reset(?:/([^/]++))?(*:907)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -162,8 +162,7 @@ return [
         838 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         851 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         861 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        879 => [[['_route' => 'app_accueil', '_controller' => 'App\\Controller\\AccueilController::index'], ['_locale'], null, null, true, true, null]],
-        923 => [
+        907 => [
             [['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

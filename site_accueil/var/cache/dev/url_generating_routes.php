@@ -50,7 +50,7 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
-    'app_accueil' => [['_locale'], ['_controller' => 'App\\Controller\\AccueilController::index'], ['_locale' => 'en|fr'], [['text', '/'], ['variable', '/', 'en|fr', '_locale', true]], [], [], []],
+    'app_accueil' => [[], ['_controller' => 'App\\Controller\\AccueilController::index'], [], [['text', '/']], [], [], []],
     'app_compte' => [[], ['_controller' => 'App\\Controller\\CompteController::index'], [], [['text', '/compte']], [], [], []],
     'app_mentions' => [[], ['_controller' => 'App\\Controller\\MentionsController::index'], [], [['text', '/mentions']], [], [], []],
     'app_new_partie' => [[], ['_controller' => 'App\\Controller\\NewPartieController::index'], [], [['text', '/new']], [], [], []],
