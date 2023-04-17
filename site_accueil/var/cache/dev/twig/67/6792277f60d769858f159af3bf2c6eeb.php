@@ -82,16 +82,6 @@ class __TwigTemplate_6ee62d63d8d00ea4bab5b27063b47db2 extends Template
         }
         // line 13
         echo "        </div>
-        <ul aria-labelledby=\"dropdown-language\">
-            <li><a href=\"";
-        // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app-accueil", ["_locale" => "en"]);
-        echo "\">English</a></li>
-            <li><a href=\"";
-        // line 16
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app-accueil", ["_locale" => "fr"]);
-        echo "\">Français</a></li>
-        </ul>
     </nav>
 </header>
 
@@ -118,7 +108,7 @@ class __TwigTemplate_6ee62d63d8d00ea4bab5b27063b47db2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  92 => 16,  88 => 15,  84 => 13,  79 => 11,  74 => 10,  69 => 8,  60 => 7,  58 => 6,  54 => 5,  47 => 3,  43 => 1,);
+        return array (  84 => 13,  79 => 11,  74 => 10,  69 => 8,  60 => 7,  58 => 6,  54 => 5,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -136,10 +126,6 @@ class __TwigTemplate_6ee62d63d8d00ea4bab5b27063b47db2 extends Template
             <a href=\"{{ path('app_login')}}\" class=\"btn btn-primary\">Se connecter</a>
         {% endif %}
         </div>
-        <ul aria-labelledby=\"dropdown-language\">
-            <li><a href=\"{{ path('app-accueil', {_locale: 'en'}) }}\">English</a></li>
-            <li><a href=\"{{ path('app-accueil', {_locale: 'fr'}) }}\">Français</a></li>
-        </ul>
     </nav>
 </header>
 

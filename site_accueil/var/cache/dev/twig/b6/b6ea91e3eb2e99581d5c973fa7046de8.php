@@ -65,7 +65,7 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "CodeNames - Accueil";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("CodeNames - Accueil", [], "messages");
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -101,7 +101,9 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
             <a href=\"";
         // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_new_partie");
-        echo "\" class=\"btn btn-primary\">Créer une partie</a>
+        echo "\" class=\"btn btn-primary\">";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Créer une partie", [], "messages");
+        echo "</a>
         </div>
 
     </div>
@@ -117,10 +119,6 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
 ";
         // line 23
         echo "        </div>
-
-
-
-
 
 
 ";
@@ -144,14 +142,14 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
 
     public function getDebugInfo()
     {
-        return array (  119 => 23,  115 => 19,  111 => 18,  103 => 13,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  121 => 23,  117 => 19,  113 => 18,  103 => 13,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}CodeNames - Accueil{% endblock %}
+{% block title %}{% trans %}CodeNames - Accueil{% endtrans %}{% endblock %}
 
 {% block body %}
 
@@ -161,7 +159,7 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
 
 
         <div id=\"home-btn\">
-            <a href=\"{{ path('app_new_partie') }}\" class=\"btn btn-primary\">Créer une partie</a>
+            <a href=\"{{ path('app_new_partie') }}\" class=\"btn btn-primary\">{% trans %}Créer une partie{% endtrans %}</a>
         </div>
 
     </div>
@@ -172,10 +170,6 @@ class __TwigTemplate_c90a0c0d15691d528f5938a6c08a41ac extends Template
             <img src=\"../img/Groot.webp\" alt=\"banner\">
 #}
         </div>
-
-
-
-
 
 
 {% endblock %}

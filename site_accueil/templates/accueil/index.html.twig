@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}CodeNames - Accueil{% endblock %}
+{% block title %}{% trans %}CodeNames - Accueil{% endtrans %}{% endblock %}
 
 {% block body %}
 
@@ -10,7 +10,7 @@
 
 
         <div id="home-btn">
-            <a href="{{ path('app_new_partie') }}" class="btn btn-primary">Créer une partie</a>
+            <a href="{{ path('app_new_partie') }}" class="btn btn-primary">{% trans %}Créer une partie{% endtrans %}</a>
         </div>
 
     </div>
@@ -21,10 +21,6 @@
             <img src="../img/Groot.webp" alt="banner">
 #}
         </div>
-
-
-
-
 
 
 {% endblock %}

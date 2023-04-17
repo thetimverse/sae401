@@ -183,14 +183,27 @@ footer {
     z-index: 15;
     height: 5vh;
     color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
 }
 
 footer a {
+    text-decoration: none;
+}
+
+footer p a {
     color: #e0e0e0;
 }
 
-footer a:hover {
+footer p a:hover {
     color: #F5F5F5;
+    text-decoration: underline;
+}
+
+footer img {
+    width: 20px;
 }
 
 .mentions {
