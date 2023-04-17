@@ -11,10 +11,8 @@
             <a href="{{ path('app_login')}}" class="btn btn-primary">Se connecter</a>
         {% endif %}
         </div>
-        <ul aria-labelledby="dropdown-language">
-            <li><a href="{{ path('app-accueil', {_locale: 'en'}) }}">English</a></li>
-            <li><a href="{{ path('app-accueil', {_locale: 'fr'}) }}">Français</a></li>
-        </ul>
+        <a href="{{ path('app-accueil', {_locale: 'en'}) }}"><img src="{{ asset('img/english.png') }}"></a>
+        <a href="{{ path('app-accueil', {_locale: 'fr'}) }}"><img src="{{ asset('img/french.png') }}"></a>
     </nav>
 </header>
 
