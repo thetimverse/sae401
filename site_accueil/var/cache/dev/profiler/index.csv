@@ -334,3 +334,8 @@ c0d5b8,172.18.0.1,GET,http://localhost:8088/sae401/index.php/fr/,1681762849,,200
 53ecba,172.18.0.1,GET,http://localhost:8088/sae401/index.php/en/,1681762851,,200
 428dbe,172.18.0.1,GET,http://localhost:8088/sae401/index.php/logout,1681763035,,302
 6a8a68,172.18.0.1,GET,http://localhost:8088/sae401/index.php/fr/,1681763036,,200
+fdf314,172.18.0.1,GET,http://localhost:8088/sae401/index.php/fr/,1681764728,b6261d,404
+b6261d,172.18.0.1,GET,http://localhost:8088/sae401/index.php/fr/,1681764729,,404
+1078a8,172.18.0.1,GET,http://localhost:8088/sae401/index.php/,1681764738,,200
+6a2701,172.18.0.1,GET,http://localhost:8088/sae401/index.php/inscription,1681764747,,200
+824c31,172.18.0.1,GET,http://localhost:8088/sae401/index.php/login,1681764751,,200
