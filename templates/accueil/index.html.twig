@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CodeNames - Accueil{% endblock %}
+
+{% block body %}
+
+    <div id="home" class="main">
+        <img src="{{ asset('img/codenames-13.png') }}" alt="logo" id="logo">
+        <img src="{{ asset('img/marvel3.png') }}" alt="logo marvel" id="logo-marvel">
+
+
+        <div id="home-btn">
+            <a href="{{ path('app_new_partie') }}" class="btn btn-primary">Créer une partie</a>
+        </div>
+
+    </div>
+        <div id="banner">
+            <img src="{{ asset('img/ironman-full.png') }}" alt="banner">
+            <img src="{{ asset('img/spidey-nwh-jump.png') }}" alt="banner">
+{#
+            <img src="../img/Groot.webp" alt="banner">
+#}
+        </div>
+
+
+
+
+
+
+{% endblock %}
