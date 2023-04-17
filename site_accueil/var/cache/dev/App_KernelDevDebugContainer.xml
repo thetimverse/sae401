@@ -117,7 +117,7 @@
     <parameter key="kernel.http_method_override">false</parameter>
     <parameter key="kernel.trust_x_sendfile_type_header">false</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="kernel.enabled_locales" type="collection"/>
     <parameter key="kernel.error_controller">error_controller</parameter>
     <parameter key="debug.file_link_format">%env(default::SYMFONY_IDE)%</parameter>
@@ -612,7 +612,7 @@
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
       <argument>false</argument>
       <argument type="collection"/>
@@ -855,7 +855,7 @@
     </service>
     <service id="slugger" class="Symfony\Component\String\Slugger\AsciiSlugger">
       <tag name="kernel.locale_aware"/>
-      <argument>en</argument>
+      <argument>fr</argument>
     </service>
     <service id="container.getenv" class="Closure">
       <tag name="routing.expression_language_function" function="env"/>
@@ -1369,7 +1369,7 @@
       <argument type="service" id="translation.writer"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument>/var/www/sae401/site_accueil/translations</argument>
       <argument>/var/www/sae401/site_accueil/templates</argument>
       <argument type="collection">
@@ -1406,7 +1406,7 @@
       <argument type="service" id="translation.provider_collection"/>
       <argument type="service" id="translation.writer"/>
       <argument type="service" id="translation.reader"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="collection"/>
       <argument type="collection"/>
       <call method="setName">
@@ -1888,7 +1888,7 @@
       <tag name="kernel.locale_aware"/>
       <argument type="service" id=".service_locator.yY.p4P7"/>
       <argument type="service" id="translator.formatter.default"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -2531,7 +2531,7 @@
     <service id="translation.locale_switcher" class="Symfony\Component\Translation\LocaleSwitcher">
       <tag name="kernel.reset" method="reset"/>
       <tag name="kernel.locale_aware"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="tagged_iterator" tag="kernel.locale_aware" exclude="translation.locale_switcher"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
     </service>
@@ -3002,14 +3002,6 @@
         <argument>-100</argument>
       </call>
       <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerRunningEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.dispatch_pcntl_signal_listener"/>
-          <argument>onWorkerRunning</argument>
-        </argument>
-        <argument>100</argument>
-      </call>
-      <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="messenger.listener.stop_worker_on_restart_signal_listener"/>
@@ -3024,14 +3016,6 @@
           <argument>onWorkerRunning</argument>
         </argument>
         <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.stop_worker_on_sigterm_signal_listener"/>
-          <argument>onWorkerStarted</argument>
-        </argument>
-        <argument>100</argument>
       </call>
       <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerMessageFailedEvent</argument>
@@ -3435,7 +3419,7 @@
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="parameter_bag" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.router" on-invalid="ignore"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <call method="setConfigCacheFactory">
         <argument type="service" id="config_cache_factory"/>
       </call>

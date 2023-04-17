@@ -82,18 +82,6 @@ class __TwigTemplate_6ee62d63d8d00ea4bab5b27063b47db2 extends Template
         }
         // line 13
         echo "        </div>
-        <a href=\"";
-        // line 14
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app-accueil", ["_locale" => "en"]);
-        echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/english.png"), "html", null, true);
-        echo "\"></a>
-        <a href=\"";
-        // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app-accueil", ["_locale" => "fr"]);
-        echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/french.png"), "html", null, true);
-        echo "\"></a>
     </nav>
 </header>
 
@@ -120,7 +108,7 @@ class __TwigTemplate_6ee62d63d8d00ea4bab5b27063b47db2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  93 => 15,  87 => 14,  84 => 13,  79 => 11,  74 => 10,  69 => 8,  60 => 7,  58 => 6,  54 => 5,  47 => 3,  43 => 1,);
+        return array (  84 => 13,  79 => 11,  74 => 10,  69 => 8,  60 => 7,  58 => 6,  54 => 5,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -138,8 +126,6 @@ class __TwigTemplate_6ee62d63d8d00ea4bab5b27063b47db2 extends Template
             <a href=\"{{ path('app_login')}}\" class=\"btn btn-primary\">Se connecter</a>
         {% endif %}
         </div>
-        <a href=\"{{ path('app-accueil', {_locale: 'en'}) }}\"><img src=\"{{ asset('img/english.png') }}\"></a>
-        <a href=\"{{ path('app-accueil', {_locale: 'fr'}) }}\"><img src=\"{{ asset('img/french.png') }}\"></a>
     </nav>
 </header>
 

@@ -187,6 +187,11 @@ $catalogue = new MessageCatalogue('fr', array (
     'The reset password link is invalid. Please try to reset your password again.' => 'Le lien de réinitialisation du mot de passe n\'est pas valide. Veuillez réessayer de réinitialiser votre mot de passe',
     'You have already requested a reset password email. Please check your email or try again soon.' => 'Vous avez déjà demandé un e-mail de réinitialisation du mot de passe. Veuillez vérifier votre e-mail ou réessayer bientôt.',
   ),
+  'messages' => 
+  array (
+    'New game' => 'Créer une partie',
+    'Codenames - Home' => 'CodeNames - Accueil',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (

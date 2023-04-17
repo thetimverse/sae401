@@ -85,8 +85,20 @@ class __TwigTemplate_e81cff2a485b4e67e119ce164375c31d extends Template
         // line 24
         echo "
     <footer>
-        <p>&copy 2023 IUT de Troyes - <a href=\"";
+        <a href=\"";
         // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil", ["_locale" => "en"]);
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/english.png"), "html", null, true);
+        echo "\"></a>
+        <a href=\"";
+        // line 27
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil", ["_locale" => "fr"]);
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/french.png"), "html", null, true);
+        echo "\"></a>
+        <p>&copy 2023 IUT de Troyes - <a href=\"";
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_mentions");
         echo "\">Mentions Légales</a></p>
     </footer>
@@ -197,7 +209,7 @@ class __TwigTemplate_e81cff2a485b4e67e119ce164375c31d extends Template
 
     public function getDebugInfo()
     {
-        return array (  171 => 23,  161 => 16,  151 => 15,  138 => 11,  135 => 10,  125 => 9,  106 => 5,  90 => 26,  86 => 24,  84 => 23,  80 => 22,  77 => 21,  75 => 20,  70 => 17,  68 => 15,  65 => 14,  62 => 9,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  183 => 23,  173 => 16,  163 => 15,  150 => 11,  147 => 10,  137 => 9,  118 => 5,  102 => 28,  96 => 27,  90 => 26,  86 => 24,  84 => 23,  80 => 22,  77 => 21,  75 => 20,  70 => 17,  68 => 15,  65 => 14,  62 => 9,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -227,6 +239,8 @@ class __TwigTemplate_e81cff2a485b4e67e119ce164375c31d extends Template
     {% block body %}{% endblock %}
 
     <footer>
+        <a href=\"{{ path('app_accueil', {_locale: 'en'}) }}\"><img src=\"{{ asset('img/english.png') }}\"></a>
+        <a href=\"{{ path('app_accueil', {_locale: 'fr'}) }}\"><img src=\"{{ asset('img/french.png') }}\"></a>
         <p>&copy 2023 IUT de Troyes - <a href=\"{{ path('app_mentions') }}\">Mentions Légales</a></p>
     </footer>
 
